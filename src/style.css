@@ -1,0 +1,212 @@
+/* Define a base font size for the root element */
+html {
+    font-size: 16px;
+}
+
+/* styles.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Your existing styles... */
+
+body {
+    margin: 0;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.625rem;
+    background-color: #ffffff;
+    transition: background-color 0.3s;
+}
+
+span {
+    font-weight: 500;
+}
+
+.night-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.125rem;
+}
+
+.icon::before {
+    content: '\1F319';
+}
+
+.night-mode .icon::before {
+    content: '\2600';
+    color: #fff !important;
+}
+
+.night-mode {
+    background-color: #010409;
+    color: #fff !important;
+}
+
+/* Additional styles for the "Display" button */
+.display-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #ffff; /* Blue color, you can adjust this */
+    color: #000;
+    border: none;
+    border-radius: 0.3125rem;
+    box-shadow: 0 0 5px rgba(40, 40, 40, 0.767);
+    transition: all 0.3s ease;
+}
+
+.task-box {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    margin: 1.25rem 0;
+    width: 17.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0.3125rem;
+    text-align: left;
+}
+
+.task-box-1 {
+    border: 1px solid #ccc;
+    margin: 1.25rem;
+    width: 9.375rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0.3125rem;
+    font-size: 0.8125rem;
+    color: #8d8d8d;
+}
+
+.night-mode .navbar{
+    background-color: #161b22;
+}
+
+.task-box-1 .task-box-2 {
+    margin-right: 0.3125rem;
+    color: #555;
+    padding: 0.125rem;
+}
+
+.task-box span {
+    color: #8d8d8d;
+}
+
+.night-mode .task-box {
+    background-color: #161b22 !important;
+    color: #fff !important;
+    border-color: #555 !important;
+    box-shadow: 0 0.0.20rem rgb(255, 255, 255);
+}
+
+.night-mode .display-button {
+    background-color: #161b22 !important;
+    color: #fff !important;
+    border-color: #555 !important;
+    box-shadow: 0 0.0.20rem rgb(255, 255, 255);
+}
+
+.display-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-bottom: 0.625rem;
+}
+
+.dropdown-options {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    padding: 1.25rem;
+    border: 1px solid #ccc;
+    border-radius: 0.3125rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(40, 40, 40, 0.767);
+    z-index: 1;
+}
+
+.dropdown-options > div {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-options label {
+    margin-right: 3.125rem;
+}
+
+.dropdown-options select {
+    flex: 1;
+    width: 6.25rem;
+    margin-top: 0.375rem;
+    font-size: 0.9rem;
+    padding: 0.3125rem ;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    
+    
+}
+
+.night-mode .dropdown-options {
+    background-color: #161b22 !important;
+    color: #fff !important;
+    border-color: #555 !important;
+}
+
+.night-mode .dropdown-options label {
+    color: #fff !important;
+}
+
+.night-mode .dropdown-options select {
+    background-color: #161b22 !important;
+    color: #fff !important;
+    border-color: #555 !important;
+}
+
+.same-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    padding-left: 0.625rem;
+}
+
+.same-line .same-lines {
+    margin-left: auto;
+    padding-right: 0.3125rem;
+}
+
+.same-line .same_lines {
+    padding-right: 1rem;
+}
+
+.task-box-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.25rem;
+    padding: 0 1.875rem;
+}
+
+/* Add more responsive styles as needed */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.75rem;
+        display: flex;
+        width: 100%;
+    }
+
+  
+
+    .task-box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .task-box-1{
+        width: auto;
+    }
+}
